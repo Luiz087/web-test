@@ -23,7 +23,7 @@ body{
     padding: 0px;
 }
 
-.lista-cabeca {
+.lista-cabeca { /* UL lista */
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -31,7 +31,7 @@ body{
     
 }
 
-.cabeca {
+.cabeca { /* Navbar header*/
     background:#314c53;
     width: 100%;
     height: 60px;
@@ -42,15 +42,18 @@ body{
     font-size: 20px;
 }
 
-li {
+li { /* Estilização dos pontos da lista*/
     list-style-type: none;
     color: grey;
     cursor: pointer;
     padding: 20px;
-    color: #010300;
+    color: #f7f8fc;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.profile-button{
+.profile-button{ /* Botão de perfil*/
     background-color: transparent;
     width: 30px;
     height: 30px;
@@ -61,34 +64,51 @@ li {
     margin: 20px;
 }
 
-.nome-loja{
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    left: -500px;
-    color: gold;
+.nome-loja{ /* Nome da loja do header*/
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    color: #f7f8fc;
 }
 
-.btnProfile-popup{
+.btnProfile-popup{  /* Popup click perfil*/
     width: 130px;
-    height: 50px;
     background: transparent;
-    border: 2px solid white;
-    outline: none;
-    border-radius: 6px;
+    border: 2px solid #bbdec6;
+    border-radius: 10px;
     font-size: 1.1em;
     color: white;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
+    
 }
 
-.btnSettings{
-    background: rgba(196, 255, 250, 0.5);
+.btnSettings{ /*Botões dentro da popup*/
+    background: transparent;
     border: none;
+    text-align: start;
+    color: #010300;
 }
 
-.btnProfile-popup:hover{
+.btnProfile-popup:hover{ /*depois que aparece a popup*/
     background: white;
-    color: #162938;
+}
+
+footer{ /*Estilização do rodapé em geral*/
+    display: flex;
+    flex-direction: row;
+    background-color: #314c53;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 30vh;
+    justify-content: space-between;    
+}
+
+.footer-div{ /*Estilização das divs do rodapé*/
+    text-align: start;
+    padding: 20px;
+    padding-top: 10px;
+    justify-content: start;
 }
