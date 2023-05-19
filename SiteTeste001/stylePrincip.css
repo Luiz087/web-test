@@ -18,9 +18,10 @@
 }
 
 
-body{
+html, body{
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 
 .lista-cabeca { /* UL lista */
@@ -102,13 +103,13 @@ footer{ /*Estilização do rodapé em geral*/
     flex-direction: row;
     background-color: #314c53;
     position: absolute;
-    bottom: 0px;
-    width: 100vw;
-    height: 20vh;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
     justify-content: space-around;    
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-    align-items: flex-end;
+    left: 0;
 }
 
 .footer-div{ /*Estilização das divs do rodapé*/
@@ -128,4 +129,13 @@ footer{ /*Estilização do rodapé em geral*/
     justify-content: center;
     margin: 5px;
 
+}
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
+}
+
+div.body-content{
+    padding-bottom: 100px;
 }
