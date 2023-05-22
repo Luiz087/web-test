@@ -54,7 +54,7 @@ li { /* Estilização dos pontos da lista*/
     padding-bottom: 15px;
 }
 
-.profile-button{ /* Botão de perfil*/
+.profileButton{ /* Botão de perfil*/
     background-color: transparent;
     width: 30px;
     height: 30px;
@@ -72,7 +72,7 @@ li { /* Estilização dos pontos da lista*/
     color: #f7f8fc;
 }
 
-.btnProfile-popup{  /* Popup click perfil*/
+.popup-wrapper{  /* Popup click perfil*/
     width: 130px;
     background: transparent;
     border: 2px solid #bbdec6;
@@ -82,7 +82,7 @@ li { /* Estilização dos pontos da lista*/
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
-    
+    display: none;
 }
 
 .btnSettings{ /*Botões dentro da popup*/
@@ -90,9 +90,23 @@ li { /* Estilização dos pontos da lista*/
     border: none;
     text-align: start;
     color: #010300;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
 }
 
-.btnProfile-popup:hover{ /*depois que aparece a popup*/
+.closeProfilePopup{ /*Botões dentro da popup*/
+    background: transparent;
+    border: none;
+    text-align: start;
+    color: #010300;
+}
+
+.popup-wrapper:hover{ /*depois que aparece a popup*/
     background: white;
 }
 
