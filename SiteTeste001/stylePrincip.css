@@ -1,22 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,700;1,900&display=swap');
 
-.testecor1{
-    color: #010300;
-}
-.testecor2{
-    color: #314c53;
-}
-.testecor3{
-    color: #5a7f78;
-}
-.testecor4{
-    color: #bbdec6;
-}
-.testecor5{
-    color: #f7f8fc;
-}
-
+/*color: #010300;   color: #314c53; color: #5a7f78; color: #bbdec6; color: #f7f8fc;*/
 
 html, body{
     margin: 0px;
@@ -83,6 +68,20 @@ li { /* Estilização dos pontos da lista*/
     margin-left: 40px;
     transition: .5s;
     display: none;
+}
+
+.popup-wrapper:hover{  /* Popup click perfil*/
+    width: 130px;
+    background: transparent;
+    border: 2px solid #bbdec6;
+    border-radius: 10px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+    display: flex;
+    align-items: end;
 }
 
 .btnSettings{ /*Botões dentro da popup*/

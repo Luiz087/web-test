@@ -1,14 +1,17 @@
 const profileButton = document.querySelector('.profileButton')
 const popupProfile = document.querySelector('.popup-wrapper')
-const closeButtonPopup2 = document.querySelector('.wrapper')
+const closePopup = document.querySelector('.wrapper')
 
 profileButton.addEventListener('click', ()=> {
-    popupProfile.style.display = 'block'
+    popupProfile.style.display = 'flex'
 })
 
-closeButtonPopup2.addEventListener('click', event => {
-    const ClassNameOfClickedElement = event.target.classList[0]
-    if(ClassNameOfClickedElement === popup)
-    console.log(ClassNameOfClickedElement)
-    //popupProfile.style.display = 'none'
+closePopup.addEventListener('click', event => {
+    const classNameOfClickedElement = event.target.classList[0]
+    console.log(classNameOfClickedElement)
+
+    if(classNameOfClickedElement === 'closeProfilePopup'||  classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined') {
+        popupProfile.style.display = 'none'
+    }
+    
 })
