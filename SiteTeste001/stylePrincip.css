@@ -14,7 +14,7 @@ html, body{
     padding: 0px;
     display: flex;
     flex-direction: row;
-    
+    align-items: center;
 }
 
 .cabeca { /* Navbar header*/
@@ -57,45 +57,43 @@ li { /* Estilização dos pontos da lista*/
     color: #f7f8fc;
 }
 
-.popup-wrapper{  /* Popup click perfil*/
-    width: 130px;
-    background: transparent;
-    border: 2px solid #bbdec6;
-    border-radius: 10px;
-    font-size: 1.1em;
-    color: white;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
+.popup-wrapper{
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: none;
 }
 
-.popup-wrapper:hover{  /* Popup click perfil*/
+.popup{  /* Popup click perfil*/
     width: 130px;
-    background: transparent;
+    background: white;
     border: 2px solid #bbdec6;
     border-radius: 10px;
     font-size: 1.1em;
     color: white;
-    font-weight: 500;
-    margin-left: 40px;
+    margin-left: 90%;
+    margin-top: 60px;
     transition: .5s;
-    display: flex;
-    align-items: end;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnSettings{ /*Botões dentro da popup*/
     background: transparent;
     border: none;
+    border-radius: 10px;
     text-align: start;
     color: #010300;
     height: 30px;
-    width: 200px;
+    width: 130px;
     cursor: pointer;
     font-family: 'Poppins';
     font-size: 15px;
     padding: 5px;
-    text-decoration: none;
 }
 
 .closeProfilePopup{ /*Botões dentro da popup*/
@@ -105,11 +103,15 @@ li { /* Estilização dos pontos da lista*/
     color: #010300;
 }
 
-.popup-wrapper:hover{ /*depois que aparece a popup*/
-    background: white;
+.btnSettings:hover{ /*depois que aparece a popup*/
+    background: rgb(25, 25, 25);
+    color: white;
+    width: 130px;
+    transition: 0.2s;
 }
 
-footer{ /*Estilização do rodapé em geral*/
+/*
+footer{ 
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -125,7 +127,7 @@ footer{ /*Estilização do rodapé em geral*/
     left: 0;
 }
 
-.footer-div{ /*Estilização das divs do rodapé*/
+.footer-div{ 
     text-align: start;
     padding: 20px;
     padding-top: 10px;
@@ -141,14 +143,8 @@ footer{ /*Estilização do rodapé em geral*/
     flex-direction: row;
     justify-content: center;
     margin: 5px;
-
-}
-
-#wrapper{
-    min-height: 100%;
-    position: relative;
 }
 
 div.body-content{
     padding-bottom: 100px;
-}
+}*/
