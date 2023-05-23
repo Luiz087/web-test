@@ -110,25 +110,16 @@ li { /* Estilização dos pontos da lista*/
     transition: 0.2s;
 }
 
-/*
 footer{ 
-    margin: 0px;
-    padding: 0px;
     display: flex;
-    flex-direction: row;
-    background-color: #314c53;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    justify-content: space-around;    
+    background: #314c53;
+    justify-content: space-around;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    left: 0;
+    font-size: 15px;
 }
 
 .footer-div{ 
-    text-align: start;
+    text-align: center;
     padding: 20px;
     padding-top: 10px;
     justify-content: start;
@@ -147,4 +138,8 @@ footer{
 
 div.body-content{
     padding-bottom: 100px;
-}*/
+}
+
+.testerodape{
+    
+}
