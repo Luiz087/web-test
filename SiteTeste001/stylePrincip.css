@@ -72,6 +72,7 @@ li:hover { /* Estilização dos pontos da lista*/
     background-color: rgba(187, 222, 198, 0.5);
     transition: 0.2s;
     border-radius: 50%;
+    border: 1px solid #bbdec6;
     width: 40px;
     height: 40px;
     bottom: 6px;
