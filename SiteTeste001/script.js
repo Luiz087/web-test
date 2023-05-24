@@ -1,3 +1,4 @@
+//Popup
 const profileButton = document.querySelector('.profileButton')
 const popupProfile = document.querySelector('.popup-wrapper')
 const closePopup = document.querySelector('.wrapper')
@@ -15,3 +16,41 @@ closePopup.addEventListener('click', event => {
     }
     
 })
+
+//Imagem inicial redirecionando para estoque
+var mostra = document.querySelector('.mostrar')
+var imginicial = document.querySelector('.img_inicial')
+
+imginicial.addEventListener('mouseenter', entrar)
+imginicial.addEventListener('mouseout', sair)
+mostra.addEventListener('mouseenter', entra)
+mostra.addEventListener('mouseout', sai)
+
+function entrar() {
+    mostra.style.display = 'block'
+    imginicial.style.filter = 'brightness(50%)'
+    imginicial.style.margin = '0'
+    imginicial.style.width = '100%'
+}
+function sair(){
+    mostra.style.display = 'none'
+    imginicial.style.filter = 'brightness(100%)'
+    imginicial.style.margin = '1%'
+    imginicial.style.width = '98%'
+}
+
+function entra() {
+    mostra.style.display = 'block'
+    imginicial.style.filter = 'brightness(50%)'
+    imginicial.style.margin = '0'
+    imginicial.style.width = '100%'
+    mostra.style.textDecoration = 'underline'
+}
+function sai() {
+    mostra.style.display = 'none'
+    imginicial.style.filter = 'brightness(100%)'
+    imginicial.style.margin = '1%'
+    imginicial.style.width = '98%'
+    mostra.style.textDecoration = 'none'
+    mostra.display.transition = '0.2s'
+}

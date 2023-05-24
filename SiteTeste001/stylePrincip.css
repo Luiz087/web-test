@@ -10,11 +10,13 @@ html, body{
 }
 
 .lista-cabeca { /* UL lista */
-    margin: 0px;
-    padding: 0px;
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: row;
     align-items: center;
+    width: 400px;
+    justify-content: space-around;
 }
 
 .cabeca { /* Navbar header*/
@@ -32,11 +34,19 @@ li { /* Estilização dos pontos da lista*/
     list-style-type: none;
     color: grey;
     cursor: pointer;
-    padding: 20px;
     color: #f7f8fc;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+li:hover { /* Estilização dos pontos da lista*/
+    color: #010300;
+    text-decoration: underline;
+    font-size: 22px;
+    transition: 0.4s;
+    right: 6px;
+    bottom: 1px;
+    position: relative;
 }
 
 .profileButton{ /* Botão de perfil*/
@@ -50,11 +60,57 @@ li { /* Estilização dos pontos da lista*/
     margin: 20px;
 }
 
+.img_profile{
+    width: 30px;
+    height: 30px;
+    right: 6px;
+    bottom: 1px;
+    position: relative;
+    transition: 0.2s;
+}
+.profileButton:hover .img_profile:hover{ 
+    background-color: rgba(187, 222, 198, 0.5);
+    transition: 0.2s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    bottom: 6px;
+    right: 12px;
+}
+
 .nome-loja{ /* Nome da loja do header*/
     left: 50px;
     padding: 20px;
     position: absolute;
     color: #f7f8fc;
+}
+
+.img_inicial{
+    width: 98%;
+    margin: 1%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+.img_inicial:hover{
+    transition: 0.3s;
+    width: 100%;
+    margin: 0;
+    filter: brightness(50%);
+}
+
+.mostrar{
+    display: none;
+    position: absolute;
+    font: bold 70px 'Poppins';
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    top: 30%;
+    right: 40%;
+    margin: 0;
+    padding: 0;
+    color: #bbdec6;
 }
 
 .popup-wrapper{
@@ -102,7 +158,6 @@ li { /* Estilização dos pontos da lista*/
     text-align: start;
     color: #010300;
 }
-
 .btnSettings:hover{ /*depois que aparece a popup*/
     background: rgb(25, 25, 25);
     color: white;
@@ -119,14 +174,13 @@ footer{
 }
 
 .footer-div{ 
-    text-align: center;
-    padding: 20px;
-    padding-top: 10px;
-    justify-content: start;
     color: #f7f8fc;
-    max-width: 150px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 274.5px;
+    padding: 10px;
 }
 
 .social{
@@ -134,4 +188,32 @@ footer{
     flex-direction: row;
     justify-content: center;
     margin: 5px;
+}
+
+.socialButton-button{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    left: 96%;
+    top: 93%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.socialButton-img{
+    width: 30px;
+    height: 30px;
+    background: rgba(34, 54, 41, 0.5);
+    border-radius: 25%;
+}
+.socialButton-img:hover{
+    background: rgba(0, 0, 0, 0.5);
+    width: 32px;
+    height: 32px;
+    transition: 0.2s;
+    border-radius: 25%;
 }
