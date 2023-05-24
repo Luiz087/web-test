@@ -36,8 +36,7 @@ li { /* Estilização dos pontos da lista*/
     cursor: pointer;
     color: #f7f8fc;
     justify-content: space-around;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
 }
 li:hover { /* Estilização dos pontos da lista*/
     color: #010300;
