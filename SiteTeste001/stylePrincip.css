@@ -119,12 +119,18 @@ li:hover { /*Estilização dos pontos da lista depois*/
     width: 800px;
     height: 400px;
     overflow: hidden;
+    transition: .2s;
+}
+.slider:hover{
+    scale: 120%;
+    transition: .5s;
 }
 
 .slides{
     width: 400%;
     height: 400px;
     display: flex;
+
 }
 
 .slides input{
@@ -325,3 +331,4 @@ footer{
     border-radius: 25%;
     filter: opacity(100%);
 }
+

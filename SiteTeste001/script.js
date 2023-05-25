@@ -2,15 +2,25 @@
 const profileButton = document.querySelector('.profileButton')
 const popupProfile = document.querySelector('.popup-wrapper')
 const closePopup = document.querySelector('.wrapper')
+const slider = document.querySelector('.slider')
 
 profileButton.addEventListener('click', ()=> {
     popupProfile.style.display = 'block'
 })
 
+slider.addEventListener('mouseenter', sliderentrar)
+slider.addEventListener('mouseout', slidersair)
+
+function sliderentrar(){
+    
+}
+
+function slidersair(){
+    
+}
+
 closePopup.addEventListener('click', event => {
     const classNameOfClickedElement = event.target.classList[0]
-    console.log(classNameOfClickedElement)
-
     if(classNameOfClickedElement === 'popup-wrapper' || classNameOfClickedElement === 'closeProfilePopup'||  classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined') {
         popupProfile.style.display = 'none'
     }
