@@ -319,18 +319,16 @@ li:hover { /*Estilização dos pontos da lista depois*/
 }
 
 #caixaselect{
-    background: white;
+    font: 10px 'Poppins';
+    color: #314c53;
     width: 270px;
     height: 30px;
-    justify-content: center;
-    border: none;
     border-radius: 50px;
-    text-align: start;
+    text-align: center;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url(Imagens/Icons/list-nested.svg) no-repeat center right #FFF;
-    padding-right: 20px;
+    background: url(Imagens/Icons/list-nested.svg) no-repeat 95.5% 50% #FFF;
 }
 
 footer{ 
@@ -388,4 +386,3 @@ footer{
     border-radius: 25%;
     filter: opacity(100%);
 }
-
