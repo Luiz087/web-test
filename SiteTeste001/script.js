@@ -2,6 +2,7 @@
 const profileButton = document.querySelector('.profileButton')
 const popupProfile = document.querySelector('.popup-wrapper')
 const wrapper = document.querySelector('.wrapper')
+const fundopretopopup = document.querySelector('.fundopreto-popup')
 
 profileButton.addEventListener('click', ()=> {
     popupProfile.style.display = 'block'
@@ -9,7 +10,7 @@ profileButton.addEventListener('click', ()=> {
 
 wrapper.addEventListener('click', event => {
     const classNameOfClickedElement = event.target.classList[0]
-    if(classNameOfClickedElement === 'popup-wrapper' || classNameOfClickedElement === 'closeProfilePopup'||  classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined') {
+    if(classNameOfClickedElement === 'popup-wrapper' || classNameOfClickedElement === 'closeProfilePopup'||  classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined' || classNameOfClickedElement === 'fundopreto-popup') {
         popupProfile.style.display = 'none'
     }
     
