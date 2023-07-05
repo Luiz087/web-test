@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylePrincip.css">
-    <link rel="Logo" href="Imagens/Icons/Logo.ico">
     <title>Principal</title>
+    <link rel="logo" href="Imagens/Icons/Logo.ico">
 </head>
 <body>
     <header>
@@ -16,16 +16,17 @@
                 <h2 class="nome-loja" style="padding: 7px; margin: 0;">GSP Automóveis</h2>
             </a>
             <ul class="lista-cabeca">
-                <li>Início</li>
-                <li>Estoque</li>
-                <li>Sobre</li>
-                <li>Contato</li>
+                <li><a href="index.html" style="color: black;">Início</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
             <button type="submit" class="profileButton"><img src="Imagens/image_profile.svg" class="img_profile"></button>
         </nav>
     </header>
-    <main>
+    <!--<img src="Imagens/imgtelainicial.jpg" style="display: flex; width: 100; object-fit: cover; width: 100%; height: 91vh;" alt="">-->
+    <main style="background: rgb(255, 255, 255);">
         <div>
             <a href="estoque.html">
                 <img src="Imagens/carroTelaInicial.jpg" alt="" class="img_inicial">
@@ -73,7 +74,7 @@
                 <label for="radio4" class="manual-btn"></label>
             </div>
         </div>
-        <div class="wrapper"> <!-- Popup -->
+        <div class="wrapperPopup"> <!-- Popup -->
             <div class="popup-wrapper">
                 <div class="popup">
                     <div>
@@ -179,6 +180,7 @@
             </div>
         </div>
     </footer>
+    <script src="scriptInicial.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

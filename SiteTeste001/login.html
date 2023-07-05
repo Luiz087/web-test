@@ -31,25 +31,25 @@
             <form action="#">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-open-outline"></ion-icon></span>
-                    <input type="email" class="email" required>
+                    <input type="email" onchange="validateFields()" id="emailLogin" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="document-lock-outline"></ion-icon></span>
-                    <input type="password" required>
+                    <span class="icon"><ion-icon name="document-lock-outline"></ion-icon></ion-icon></span>
+                    <input type="password" onchange="validateFields()" id="passwordLogin" required>
                     <label>Senha</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Lembrar-me</label>
-                    <a href="#">Esqueceu sua senha?</a>
+                    <button type="button" class="clear" id="recover-password-button" disabled="true">Esqueceu sua senha?</button>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" id="loginButton">Login</button>
                 <div class="login-register">
                     <p>Não está registrado? <a href="#" class="register-link">Registrar</a></p>
                 </div>
             </form>
         </div>
-
+        <!--Parte registro-->
         <div class="form-box register">
             <h2>Registro</h2>
             <form action="#">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-open-outline"></ion-icon></span>
-                    <input type="email" class="email" required>
+                    <input type="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
@@ -76,10 +76,8 @@
                 <div class="login-register">
                     <p>Já tem uma conta? <a href="#" class="login-link">Login</a></p>
                 </div>
-
             </form>
         </div>
-     
     </div>
 
     <script src="scriptLogin.js"></script>

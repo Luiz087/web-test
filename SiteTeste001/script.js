@@ -1,88 +1,99 @@
-//Popup
-const profileButton = document.querySelector('.profileButton')
-const popupProfile = document.querySelector('.popup-wrapper')
-const wrapper = document.querySelector('.wrapper')
-const fundopretopopup = document.querySelector('.fundopreto-popup')
+const wrapper = document.querySelector('.wrapperLogin');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const iconClose = document.querySelector('.icon-close');
 
-profileButton.addEventListener('click', ()=> {
-    popupProfile.style.display = 'block'
+console.log(registerLink)
+console.log(loginLink)
+console.log(btnPopup)
+console.log(iconClose)
+
+if(registerLink){
+    registerLink.addEventListener('click', () => {
+        wrapper.classList.add('active')
+    })
+}
+
+if(loginLink){
+    loginLink.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+    })
+}
+
+if(btnPopup){
+    btnPopup.addEventListener('click', () => {
+        wrapper.classList.add('active-popup');
+    })
+}
+
+if(iconClose){
+    iconClose.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    })
+}
+
+const profileButton = document.querySelector('.profileButton');
+const popupProfile = document.querySelector('.popup-wrapper');
+const wrapperPopupProfile = document.querySelector('.wrapperPopup');
+const fundopretopopup = document.querySelector('.fundopreto-popup');
+
+profileButton.addEventListener('click', () => {
+    popupProfile.style.display = 'block';
 })
 
-wrapper.addEventListener('click', event => {
-    const classNameOfClickedElement = event.target.classList[0]
-    if(classNameOfClickedElement === 'popup-wrapper' || classNameOfClickedElement === 'closeProfilePopup'||  classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined' || classNameOfClickedElement === 'fundopreto-popup') {
-        popupProfile.style.display = 'none'
+wrapperPopupProfile.addEventListener('click', eventas => {
+    const classNameOfClickedElement = eventas.target.classList[0];
+    if (classNameOfClickedElement === 'popup-wrapper' || classNameOfClickedElement === 'closeProfilePopup' || classNameOfClickedElement === 'btnSettings' || classNameOfClickedElement === 'wrapper' || classNameOfClickedElement === 'undefined' || classNameOfClickedElement === 'fundopreto-popup') {
+        popupProfile.style.display = 'none';
     }
-    
 })
 
-//Carrossel
-/*const sliders = document.querySelector('.slider')
-const fundoslider = document.querySelector('.fundopreto-slider')
-const botaoslider = document.querySelector('.manual-navigation')
+function adicionarCarro(event) {
+    event.preventDefault();
 
-sliders.addEventListener('mouseenter', sliderentrar)
-sliders.addEventListener('mouseout', slidersair)
+    // Obter os valores dos campos do formulário
+    const carImage = document.getElementById("carImage").value;
+    const carMake = document.getElementById("carMake").value;
+    const carModel = document.getElementById("carModel").value;
 
-function sliderentrar(){
-    fundoslider.style.display = 'block'
+    // Criar a div do carro
+    const carDiv = document.createElement("div");
+    carDiv.classList.add("car");
+
+    // Criar a imagem do carro
+    const carImg = document.createElement("img");
+    carImg.src = carImage;
+    carDiv.appendChild(carImg);
+
+    // Criar os dados do carro
+    const carData = document.createElement("p");
+    carData.innerText = carMake + " " + carModel;
+    carDiv.appendChild(carData);
+
+    // Adicionar a div do carro ao catálogo
+    const carCatalog = document.getElementById("carCatalog");
+    carCatalog.appendChild(carDiv);
+
+    // Limpar os campos do formulário
+    document.getElementById("carImage").value = "";
+    document.getElementById("carMake").value = "";
+    document.getElementById("carModel").value = "";
 }
 
-function slidersair(){
-    fundoslider.style.display = 'none'
-}*/
+// Adicionar um listener para o evento de submit do formulário
+const carForm = document.getElementById("carForm");
+carForm.addEventListener("submit", adicionarCarro);
+const botaoaddcarro = document.querySelector('.add-button');
 
-let count = 1
-document.getElementById("radio1").checked = true
+var i = 0;
 
-setInterval(function(){
-    nextImage()
-}, 5000)
-
-function nextImage(){
-    count++
-    if(count>4){
-        count=1
+botaoaddcarro.addEventListener('click', () => {
+    if(i==0){
+        carForm.style.display = 'flex';
+        i++;
+    } else {
+        carForm.style.display = 'none';
+        i--;
     }
-
-    document.getElementById("radio"+count).checked = true
-
-}
-
-//Imagem inicial redirecionando para estoque
-var mostra = document.querySelector('.mostrar')
-var imginicial = document.querySelector('.img_inicial')
-
-imginicial.addEventListener('mouseenter', entrar)
-imginicial.addEventListener('mouseout', sair)
-mostra.addEventListener('mouseenter', entra)
-mostra.addEventListener('mouseout', sai)
-
-function entrar() {
-    mostra.style.display = 'block'
-    imginicial.style.filter = 'brightness(50%)'
-    imginicial.style.margin = '0'
-    imginicial.style.width = '100%'
-}
-function sair(){
-    mostra.style.display = 'none'
-    imginicial.style.filter = 'brightness(100%)'
-    imginicial.style.margin = '1%'
-    imginicial.style.width = '98%'
-}
-
-function entra() {
-    mostra.style.display = 'block'
-    imginicial.style.filter = 'brightness(50%)'
-    imginicial.style.margin = '0'
-    imginicial.style.width = '100%'
-    mostra.style.textDecoration = 'underline'
-}
-function sai() {
-    mostra.style.display = 'none'
-    imginicial.style.filter = 'brightness(100%)'
-    imginicial.style.margin = '1%'
-    imginicial.style.width = '98%'
-    mostra.style.textDecoration = 'none'
-    mostra.display.transition = '0.2s'
-}
+})
